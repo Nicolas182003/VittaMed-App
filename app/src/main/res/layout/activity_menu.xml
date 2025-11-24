@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MenuActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="188dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="60dp"
+            android:fontFamily="@font/conthrax_semibold"
+            android:text="Inicio"
+            android:textSize="60sp" />
+
+        <Button
+            android:id="@+id/btn_reservar_cita"
+            android:layout_width="match_parent"
+            android:backgroundTint="@color/btn_color"
+            android:drawableLeft="@drawable/citas"
+            android:text="Registrar cita"
+            style="@style/MenuButtom"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:backgroundTint="@color/btn_color"
+            android:text="Mis citas"
+            android:drawableLeft="@drawable/calendar"
+            style="@style/MenuButtom"/>
+
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="match_parent"
+            android:backgroundTint="@color/btn_color"
+            android:text="Cerrar sesion"
+            android:drawableLeft="@drawable/logout"
+            style="@style/MenuButtom"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_horizontal">
+
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,31 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.VittaMed" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/color_morado</item>
+        <item name="colorPrimaryVariant">@color/color_morado_accent</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <item name="colorSecondary">@color/color_gray_light</item>
+        <item name="colorSecondaryVariant">@color/color_gray</item>
+        <item name="colorOnSecondary">@color/black</item>
+    </style>
+
+    <style name="Theme.VittaMed" parent="Base.Theme.VittaMed" />
+
+    <style name="MenuButtom" parent="@style/Widget.AppCompat.Button.Colored">
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:layout_marginLeft">25dp</item>
+        <item name="android:paddingLeft">60dp</item>
+        <item name="android:paddingRight">60dp</item>
+        <item name="android:layout_marginTop">50dp</item>
+    </style>
+    <style name="NextButtom" parent="@style/Widget.AppCompat.Button.Colored">
+        <item name="android:layout_height">55dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:layout_marginLeft">25dp</item>
+        <item name="android:paddingLeft">60dp</item>
+        <item name="android:paddingRight">60dp</item>
+        <item name="android:layout_marginTop">50dp</item>
+    </style>
+</resources>
