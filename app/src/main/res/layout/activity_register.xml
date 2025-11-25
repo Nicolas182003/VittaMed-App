@@ -32,6 +32,7 @@
             android:fontFamily="@font/roboto_regular"
             android:textSize="18sp" />
         <EditText
+            android:id="@+id/etRegisterName"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginLeft="25dp"
@@ -44,6 +45,7 @@
             android:padding="15dp"/>
 
         <EditText
+            android:id="@+id/etRegisterEmail"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginLeft="25dp"
@@ -56,6 +58,7 @@
             android:padding="15dp"/>
 
         <EditText
+            android:id="@+id/etRegisterPassword"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginLeft="25dp"
@@ -67,6 +70,7 @@
             android:background="@drawable/edittex_custom"
             android:padding="15dp"/>
         <EditText
+            android:id="@+id/etRegisterPasswordConfirmation"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginLeft="25dp"
@@ -79,6 +83,7 @@
             android:padding="15dp"/>
 
         <Button
+            android:id="@+id/btnConfirmRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="100dp"
@@ -89,7 +94,7 @@
             android:background="@drawable/rounded_button"/>
 
         <TextView
-            android:id="@+id/tv_go_to_login"
+            android:id="@+id/tvGoToLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="130dp"

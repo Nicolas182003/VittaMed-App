@@ -43,6 +43,15 @@ class MenuActivity : AppCompatActivity() {
         btnReservarCita.setOnClickListener{
             gotoCreateAppointment()
         }
+        val btnMisCitas = findViewById<Button>(R.id.btn_mis_citas)
+        btnMisCitas.setOnClickListener{
+            goToMyAppointments()
+        }
+    }
+
+    private fun goToMyAppointments() {
+        val intent = Intent(this, AppointmentsActivity::class.java)
+        startActivity(intent)
     }
     private fun gotoCreateAppointment(){
         val i = Intent(this, CreateAppointmentActivity::class.java)

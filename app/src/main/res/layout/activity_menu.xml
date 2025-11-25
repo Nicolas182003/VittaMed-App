@@ -32,6 +32,7 @@
             style="@style/MenuButtom"/>
 
         <Button
+            android:id="@+id/btn_mis_citas"
             android:layout_width="match_parent"
             android:backgroundTint="@color/btn_color"
             android:text="Mis citas"
