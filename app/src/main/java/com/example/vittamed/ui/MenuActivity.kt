@@ -16,6 +16,7 @@ import com.example.vittamed.util.PreferenceHelper.get
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import androidx.cardview.widget.CardView
 
 class MenuActivity : AppCompatActivity() {
 
@@ -39,11 +40,11 @@ class MenuActivity : AppCompatActivity() {
         btnLogout.setOnClickListener{
             performLogout()
         }
-        val btnReservarCita = findViewById<Button>(R.id.btn_reservar_cita)
+        val btnReservarCita = findViewById<CardView>(R.id.btn_reservar_cita)
         btnReservarCita.setOnClickListener{
             gotoCreateAppointment()
         }
-        val btnMisCitas = findViewById<Button>(R.id.btn_mis_citas)
+        val btnMisCitas = findViewById<CardView>(R.id.btn_mis_citas)
         btnMisCitas.setOnClickListener{
             goToMyAppointments()
         }

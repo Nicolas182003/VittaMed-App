@@ -20,5 +20,29 @@
     <color name="color_red">#f5365c</color>
 
     <color name="trans">#00000000</color>
+    <!-- Paleta Dark Blue -->
+    <color name="dark_blue_50">#f3f2ff</color>
+    <color name="dark_blue_100">#ebe7ff</color>
+    <color name="dark_blue_200">#d8d1ff</color>
+    <color name="dark_blue_300">#bcadff</color>
+    <color name="dark_blue_400">#9c7eff</color>
+    <color name="dark_blue_500">#7d4bff</color>
+    <color name="dark_blue_600">#6e26ff</color>
+    <color name="dark_blue_700">#6014ed</color>
+    <color name="dark_blue_800">#4a0fb8</color>
+    <color name="dark_blue_900">#430fa3</color>
+    <color name="dark_blue_950">#27066f</color>
+
+    <!-- Colores Semánticos -->
+    <color name="color_primary">@color/dark_blue_600</color>
+    <color name="color_primary_variant">@color/dark_blue_800</color>
+    <color name="color_secondary">@color/dark_blue_400</color>
+    <color name="color_background">@color/dark_blue_50</color>
+    <color name="color_surface">@color/white</color>
+    <color name="color_text_primary">@color/dark_blue_950</color>
+    <color name="color_text_secondary">@color/dark_blue_700</color>
+    <color name="color_hint">#909090</color>
+
+
 
 </resources>

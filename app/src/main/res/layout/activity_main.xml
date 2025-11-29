@@ -1,92 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient_dark_blue"
     tools:context=".ui.MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="-16dp"
-        tools:layout_editor_absoluteY="188dp">
+    <!-- Logo o Título de la App (Visual) -->
+    <TextView
+        android:id="@+id/tvAppTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VittaMed"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-black"
+        android:layout_marginTop="60dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="60dp"
-            android:text="VitaMed"
-            android:fontFamily="@font/conthrax_semibold"
-            android:textSize="60sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tu salud, nuestra prioridad"
+        android:textColor="@color/dark_blue_200"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/tvAppTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="8dp"
-            android:text="Ingresa tu correo y contraseña"
-            android:fontFamily="@font/roboto_regular"
-            android:textSize="18sp" />
-
-        <EditText
-            android:id="@+id/et_email"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginRight="25dp"
-            android:hint="Correo Electronico"
-            android:inputType="textEmailAddress"
-            android:textSize="15dp"
-            android:background="@drawable/edittex_custom"
-            android:padding="15dp"/>
-
-        <EditText
-            android:id="@+id/et_password"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginRight="25dp"
-            android:hint="Contraseña"
-            android:inputType="textPassword"
-            android:textSize="15dp"
-            android:background="@drawable/edittex_custom"
-            android:padding="15dp"/>
-
-        <Button
-            android:id="@+id/btn_go_to_menu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="100dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="25dp"
-            android:backgroundTint="@color/btn_color"
-            android:text="Iniciar sesion"
-            android:background="@drawable/rounded_button"/>
-
-        <TextView
-            android:id="@+id/tv_go_to_register"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="120dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="21dp"
-            android:text="¿No tienes una cuenta?" />
-
-    </LinearLayout>
-
-    <LinearLayout
+    <!-- Tarjeta Contenedora -->
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_gravity="bottom">
+        android:layout_marginHorizontal="24dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="12dp"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.55">
 
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="32dp">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bienvenido"
+                style="@style/TitleStyle"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inicia sesión para continuar"
+                android:textColor="@color/color_text_secondary"
+                android:layout_marginBottom="32dp"/>
+
+            <!-- Input Email -->
+            <EditText
+                android:id="@+id/et_email"
+                style="@style/ModernInputStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Correo electrónico"
+                android:inputType="textEmailAddress"
+                android:drawableStart="@android:drawable/ic_dialog_email"
+                android:drawableTint="@color/dark_blue_400"
+                android:drawablePadding="12dp"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Input Password -->
+            <EditText
+                android:id="@+id/et_password"
+                style="@style/ModernInputStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Contraseña"
+                android:inputType="textPassword"
+                android:drawableStart="@android:drawable/ic_lock_idle_lock"
+                android:drawableTint="@color/dark_blue_400"
+                android:drawablePadding="12dp"
+                android:layout_marginBottom="32dp"/>
+
+            <!-- Botón Login -->
+            <Button
+                android:id="@+id/btn_go_to_menu"
+                style="@style/PrimaryButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Iniciar Sesión" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¿No tienes cuenta? "
+                    android:textColor="@color/color_text_secondary"/>
+
+                <TextView
+                    android:id="@+id/tv_go_to_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Regístrate"
+                    android:textStyle="bold"
+                    android:textColor="@color/dark_blue_600"
+                    android:padding="8dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

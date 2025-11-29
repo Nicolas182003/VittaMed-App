@@ -28,4 +28,43 @@
         <item name="android:paddingRight">60dp</item>
         <item name="android:layout_marginTop">50dp</item>
     </style>
+
+    <!-- Estilo para Títulos -->
+    <style name="TitleStyle">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@color/color_text_primary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <!-- Estilo para Botones Principales -->
+    <style name="PrimaryButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/color_primary</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="android:paddingVertical">14dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:stateListAnimator">@null
+        </item> <!-- Quita sombra por defecto para manejarla custom -->
+    </style>
+
+    <!-- Estilo para Inputs (EditText) -->
+    <style name="ModernInputStyle">
+        <item name="android:background">@drawable/bg_input_modern</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/color_text_primary</item>
+        <item name="android:textColorHint">@color/color_hint</item>
+    </style>
+    <!-- Agrega esto dentro de <resources> -->
+    <style name="MyDatePickerDialogTheme" parent="Theme.MaterialComponents.Light.Dialog">
+        <item name="colorAccent">@color/dark_blue_600</item>
+        <item name="android:colorAccent">@color/dark_blue_600</item>
+        <item name="android:headerBackground">@color/dark_blue_700</item>
+        <item name="android:calendarTextColor">@color/dark_blue_900</item>
+        <item name="android:dayOfWeekBackground">@color/dark_blue_100</item>
+    </style>
+
 </resources>

@@ -32,7 +32,7 @@ class AppointmentsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_appointments)
 
-        val rvAppointments = findViewById<RecyclerView>(R.id.rv_appointments)
+        val rvAppointments = findViewById<RecyclerView>(R.id.rvAppointments)
 
         rvAppointments.layoutManager = LinearLayoutManager(this)
         rvAppointments.adapter = appointmentAdapter

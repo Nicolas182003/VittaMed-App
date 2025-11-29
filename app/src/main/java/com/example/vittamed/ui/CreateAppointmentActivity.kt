@@ -67,7 +67,7 @@ class CreateAppointmentActivity : AppCompatActivity() {
 
         val etDescription = findViewById<EditText>(R.id.et_description)
         val etScheduledDate = findViewById<EditText>(R.id.et_fecha)
-        val linearLayoutCreateAppointment = findViewById<LinearLayout>(R.id.main)
+        val linearLayoutCreateAppointment = findViewById<View>(R.id.main)
 
         btnNext.setOnClickListener {
             if (etDescription.text.toString().length < 3){
