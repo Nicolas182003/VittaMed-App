@@ -1,6 +1,7 @@
 package com.example.vittamed.ui
 
 import android.app.DatePickerDialog
+import android.content.res.ColorStateList
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -17,6 +18,7 @@ import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
+import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.vittamed.R
@@ -331,15 +333,21 @@ class CreateAppointmentActivity : AppCompatActivity() {
             ))
             etScheduleDate.error = null
         }
-        val datePickerDialog = DatePickerDialog(this, listener, year, month, dayOfMonth)
+        val datePickerDialog = DatePickerDialog(this, R.style.MyDatePickerDialogTheme, listener, year, month, dayOfMonth)
         val datePicker = datePickerDialog.datePicker
         val calendar = Calendar.getInstance()
-        calendar.add(Calendar.DAY_OF_MONTH, 1)
+        calendar.set(Calendar.HOUR_OF_DAY, 0)
+        calendar.set(Calendar.MINUTE, 0)
+        calendar.set(Calendar.SECOND, 0)
+        calendar.set(Calendar.MILLISECOND, 0)
         datePicker.minDate = calendar.timeInMillis
         calendar.add(Calendar.DAY_OF_MONTH, 29)
         datePicker.maxDate = calendar.timeInMillis
 
         datePickerDialog.show()
+        val primaryColor = ContextCompat.getColor(this, R.color.color_morado)
+        datePickerDialog.getButton(DatePickerDialog.BUTTON_POSITIVE).setTextColor(primaryColor)
+        datePickerDialog.getButton(DatePickerDialog.BUTTON_NEGATIVE).setTextColor(primaryColor)
     }
 
     private fun Int.twoDigits()
@@ -364,10 +372,23 @@ class CreateAppointmentActivity : AppCompatActivity() {
 
         var goToLeft = true
 
+        val colorStateList = ColorStateList(
+            arrayOf(
+                intArrayOf(android.R.attr.state_checked),
+                intArrayOf(-android.R.attr.state_checked)
+            ),
+            intArrayOf(
+                ContextCompat.getColor(this, R.color.color_morado),
+                ContextCompat.getColor(this, R.color.color_gray)
+            )
+        )
+
         hours.forEach {
             val radioButton = RadioButton(this)
             radioButton.id = View.generateViewId()
             radioButton.text = it
+            radioButton.buttonTintList = colorStateList
+
             radioButton.setOnClickListener{ view ->
                 selectedRadioButton?.isChecked = false
                 selectedRadioButton = view as RadioButton?

@@ -58,13 +58,23 @@
         <item name="android:textColor">@color/color_text_primary</item>
         <item name="android:textColorHint">@color/color_hint</item>
     </style>
-    <!-- Agrega esto dentro de <resources> -->
+    
+    <!-- Tema para DatePickerDialog -->
     <style name="MyDatePickerDialogTheme" parent="Theme.MaterialComponents.Light.Dialog">
-        <item name="colorAccent">@color/dark_blue_600</item>
-        <item name="android:colorAccent">@color/dark_blue_600</item>
-        <item name="android:headerBackground">@color/dark_blue_700</item>
-        <item name="android:calendarTextColor">@color/dark_blue_900</item>
-        <item name="android:dayOfWeekBackground">@color/dark_blue_100</item>
+        <!-- Color principal para la selección (círculo) y botones de acción -->
+        <item name="colorAccent">@color/color_primary</item>
+        <item name="android:colorAccent">@color/color_primary</item>
+
+        <!-- Color del encabezado del calendario -->
+        <item name="android:headerBackground">@color/color_primary</item>
+        <item name="android:textColorPrimaryInverse">@color/white</item>
+        <item name="android:textColorSecondaryInverse">@color/white</item>
+
+        <!-- Color del texto para los números del mes (días disponibles) -->
+        <item name="android:textColorPrimary">@color/color_text_primary</item>
+
+        <!-- Color del texto para los días de la semana y fechas deshabilitadas -->
+        <item name="android:textColorSecondary">@color/color_gray</item>
     </style>
 
 </resources>

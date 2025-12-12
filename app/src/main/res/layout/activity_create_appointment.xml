@@ -160,18 +160,6 @@
                             android:gravity="center"
                             android:background="@drawable/selector_radio_modern"
                             android:textColor="@color/text_radio_modern"
-                            android:layout_marginHorizontal="4dp"/>
-
-                        <RadioButton
-                            android:id="@+id/radio_operacion"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="45dp"
-                            android:text="Cirugía"
-                            android:button="@null"
-                            android:gravity="center"
-                            android:background="@drawable/selector_radio_modern"
-                            android:textColor="@color/text_radio_modern"
                             android:layout_marginStart="4dp"/>
                     </RadioGroup>
 

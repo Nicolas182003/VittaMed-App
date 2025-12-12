@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "731166534196",
+    "project_id": "vittamed-20309",
+    "storage_bucket": "vittamed-20309.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:731166534196:android:87459578320a7ff87cf861",
+        "android_client_info": {
+          "package_name": "com.example.vittamed"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFKJPYThQ6bE4FxafxYKBrvGElHfeVXOQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
